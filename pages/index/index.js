@@ -20,43 +20,45 @@ Page({
     ]
   },
   onLoad: function () {
-    const self = this,
-          leftPoint = 7.5,
-          topPoint = 7.5,
-          pointList = []
-     for(let i = 0;i<24;i++){
-      if (i == 0) {
-        topPoint = 15;
-        leftPoint = 15;
+    let self = this,
+        leftPoint = 7.5,
+        topPoint = 7.5,
+        pointList = []
+     for(let i = 0;i < 24;i++){
+      if (i === 0) {
+        topPoint = 15
+        leftPoint = 15
       } else if (i < 6) {
-        topPoint = 7.5;
-        leftPonit = leftPoint + 102.5;
+        topPoint = 7.5
+        leftPoint = leftPoint + 102.5
       } else if (i == 6) {
         topPoint = 15
-        leftPoint = 620;
+        leftPoint = 620
       } else if (i < 12) {
-        topPoint = topCircle + 94;
-        leftPoint = 620;
+        topPoint = topPoint + 94
+        leftPoint = 620
       } else if (i == 12) {
-        topPoint = 565;
-        leftPoint = 620;
+        topPoint = 565
+        leftPoint = 620
       } else if (i < 18) {
-        topPoint = 570;
-        leftPoint = leftPoint - 102.5;
+        topPoint = 570
+        leftPoint = leftPoint - 102.5
       } else if (i == 18) {
-        topPoint = 565;
-        leftPoint = 15;
+        topPoint = 565
+        leftPoint = 15
       } else if (i < 24) {
-        topPoint = topPoint - 94;
-        leftPoint = 7.5;
+        topPoint = topPoint - 94
+        leftPoint = 7.5
       } else {
         return
       }
       pointList.push({topPoint:topPoint,leftPoint:leftPoint})
-     }     
-     self.setData({
-       pointList:pointList
+     } 
+
+     this.setData({
+       pointList : pointList
      })
+
 
      setInterval(function(){
        let color1 = self.data.pointColors[0],
