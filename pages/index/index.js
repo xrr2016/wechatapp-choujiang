@@ -2,7 +2,8 @@ Page({
   data: {
     pointList:[],
     prizeList:[],
-    pointColors:['#A4F6F9','#FF99FE'],
+    color1:'#BA52ED',
+    color2:'#3FC1C9',
     prizeDefaultColor:'#fff',
     prizeSelectColor:'#BA52ED',
     prizeIndex:0,
@@ -59,22 +60,20 @@ Page({
        pointList : pointList
      })
 
-
      setInterval(function(){
-       let color1 = self.data.pointColors[0],
-           color2 = self.data.pointColors[1]
-       if(color1 === '#A4F6F9'){
+       if(self.data.color1 === '#BA52ED'){
          self.setData({
-           color1 : '#FF99FE',
-           color2 : '#A4F6F9'
+           color1:'#3FC1C9',
+           color2:'#BA52ED'
          })
-       }else{
+       }else{ 
          self.setData({
-           color2 : '#FF99FE',
-           color1 : '#A4F6F9'
+           color1:'#BA52ED',
+           color2:'#3FC1C9'
          })
        }
      },800)
+
      const prizeList = []
      let topPrize = 25,
          leftPrize = 25
