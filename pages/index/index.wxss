@@ -39,6 +39,8 @@
 }
 .prize{
   position: relative;
+  width: 60px;
+  height: 60px;
 }
 .prizeImg{
   position: absolute;
@@ -49,5 +51,6 @@
   bottom: 0;
   width: 140rpx;
   height: 140rpx;
-  background: green;
+  /*border-radius: 50%;*/
+  /*border: 1px solid #fff;*/
 }

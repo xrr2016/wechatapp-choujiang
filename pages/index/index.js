@@ -4,7 +4,6 @@ Page({
     prizeList:[],
     color1:'#BA52ED',
     color2:'#3FC1C9',
-    prizeDefaultColor:'#fff',
     prizeSelectColor:'#BA52ED',
     prizeIndex:0,
     isRunning:false,
@@ -21,10 +20,12 @@ Page({
     ]
   },
   onLoad: function () {
+    //points
     let self = this,
         leftPoint = 7.5,
         topPoint = 7.5,
         pointList = []
+
      for(let i = 0;i < 24;i++){
       if (i === 0) {
         topPoint = 15
@@ -73,7 +74,7 @@ Page({
          })
        }
      },800)
-
+  //prizes
      const prizeList = []
      let topPrize = 25,
          leftPrize = 25

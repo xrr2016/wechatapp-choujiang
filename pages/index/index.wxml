@@ -3,9 +3,10 @@
   style="top:{{item.topPoint}}rpx;left:{{item.leftPoint}}rpx;background-color:{{(index % 2 === 0)?color1:color2}}">
   </view>
   <view class="prizes">
-    <view class="prize" wx-for="{{prizeList}}" 
-    style="top:{{prize.topPrize}}rpx;left:{{prize.leftPrize}}rpx;background-color:{{(index === prizeIndex)?prizeDefaultColor:prizeSelectColor}};"></view>
-      <image class="prizeImg" src="{{prize.img}}"></image>
+    <view class="prize" wx:for="{{prizeList}}" 
+    style="top:{{item.topPrize}}rpx;left:{{item.leftPrize}}rpx;">
+    <image class="prizeImg" src="{{item.prizeImg}}"></image>
+    </view>
   </view>
   <view class="startBtn" catchtap="startGame" style="background-color:{{(isRunning)?'#F1ED63':'#FFFDC1'}};">开始</view>
 </view>
