@@ -4,7 +4,8 @@ Page({
     prizeList:[],
     color1:'#BA52ED',
     color2:'#3FC1C9',
-    prizeSelectColor:'#BA52ED',
+    prizeSelectColor:'orange',
+    prizeDefaultColor:'white',
     prizeIndex:0,
     isRunning:false,
     prizeImgs:[
@@ -108,31 +109,30 @@ Page({
       isRunning:true
     })
     const self = this
-    let prizeIndex = 0
+    let prizeIndex = -1
     let i = 0
     const timer = setInterval(function(){
       prizeIndex++
       i += 30
-      if(i >= 1000){
+      if(i >= 900){
         clearInterval(timer)
-
         wx.showModal({
           title:'恭喜你',
-          content:`获得了第${self.data.peizeIndex + 1}个奖品`,
+          content:`获得了此奖品`,
           showCancel:false,
           success:function(res){
             if(res.confirm){
               self.setData({
-                isRunning:false
+                isRunning:false,
               })
             }
           }
         })
-        prizeIndex = prizeIndex % 8 
-        self.setData({
-          prizeIndex:prizeIndex
-        })
       }
+      prizeIndex = prizeIndex % 8 
+      self.setData({
+          prizeIndex:prizeIndex
+      })
     },(200 + i))
   }
 })

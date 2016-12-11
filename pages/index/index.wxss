@@ -29,20 +29,23 @@
   left: 50%;
   width: 120rpx;
   height: 120rpx;
-  margin-top:-60rpx;
-  margin-left: -60rpx;
+  margin-top:-72rpx;
+  margin-left: -70rpx;
   color: black;
   text-align: center;
   font-size: 48rpx;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 120rpx;
   font-weight: bolder;
-  border-radius: 50%;
+  border-radius: 24rpx;
 }
 .prize{
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 140rpx;
+  height: 140rpx;
+  padding: 4rpx;
+  background-color: #fff;
+  border-radius: 24rpx;
 }
 .prizeImg{
   position: absolute;
@@ -53,6 +56,4 @@
   bottom: 0;
   width: 140rpx;
   height: 140rpx;
-  /*border-radius: 50%;*/
-  /*border: 1px solid #fff;*/
 }

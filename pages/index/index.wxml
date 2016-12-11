@@ -6,12 +6,12 @@
 
   <view class="prizes">
     <view class="prize" wx:for="{{prizeList}}" 
-    style="top:{{item.topPrize}}rpx;left:{{item.leftPrize}}rpx;">
+    style="top:{{item.topPrize}}rpx;left:{{item.leftPrize}}rpx;background-color:{{(index === prizeIndex)?prizeSelectColor:prizeDefaultColor}}">
       <image class="prizeImg" src="{{item.prizeImg}}"></image>
     </view>
   </view>
 
   <view class="startBtn" catchtap="startGame" 
-  style="background-color:{{(isRunning)?'#F1ED63':'#FFFDC1'}};">开始</view>
+  style="background-color:{{(isRunning)?'orange':'white'}};">开始</view>
 
 </view>
