@@ -76,24 +76,24 @@ Page({
      },800)
   //prizes
      const prizeList = []
-     let topPrize = 25,
-         leftPrize = 25
+     let topPrize = 30,
+         leftPrize = 46
     for(let i = 0;i < 8;i++){
       if(i === 0){
-        topPrize = 25
-        leftPrize = 25
+        topPrize = 30
+        leftPrize = 30
       }else if(i < 3){
         topPrize = topPrize
-        leftPrize = leftPrize + 166.666 + 15
+        leftPrize = leftPrize + 166.666 + 20
       }else if(i < 5){
         leftPrize = leftPrize
         topPrize = topPrize + 150 + 15
       }else if(i < 7){
-        leftPrize = leftPrize - 166.666 -15
+        leftPrize = leftPrize - 166.666 -20
         topPrize = topPrize
       }else if (i < 8 ){
         leftPrize = leftPrize
-        topPrize = topPrize - 150 -15
+        topPrize = topPrize - 150 - 20
       }
       let prizeImg = self.data.prizeImgs[i]
       prizeList.push({topPrize:topPrize,leftPrize:leftPrize,prizeImg:prizeImg})
